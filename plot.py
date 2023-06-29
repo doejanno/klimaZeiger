@@ -7,6 +7,7 @@ counter = []
 # Live plot erstellen
 def livePlot():
     try:
+        # initialise arrays
         x = []
         y = []
 
@@ -14,6 +15,7 @@ def livePlot():
 
         plt.show(block=False)
 
+        # loop the plot
         while True:
             liveTemp = data.getTestData()
             x.append(len(counter) + 1)
@@ -29,7 +31,7 @@ def livePlot():
             plt.title("Data logger Readings")
             plt.xlabel("Time")
             plt.ylabel("Zahl")
-            plt.draw()
             plt.pause(1)
+            plt.draw()
     except:
-        print('Graph could not be shown')
+        print('Graph was closed')
