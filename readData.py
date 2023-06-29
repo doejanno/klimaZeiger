@@ -11,7 +11,7 @@ def readData():
         data = s.recv(1024).decode('utf-8')
         return data
 
+# Test as long as there is no logge
 def getTestData():
     data = 1
     return data
-    
